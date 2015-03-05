@@ -1,0 +1,130 @@
+
+@mixin fontStyle() 
+{ 
+	color: #FFFFFF; /* variable*/
+}/* mixin */
+
+@media only screen and (max-width: 1024px){
+	body{ marign: 0;}	
+	#wrapper { width: auto;}
+	main { margin-left: 0;}
+	nav { float: none;}
+	h1 { margin: auto; width: 60%;}
+}
+
+@media only screen and (max-width: 768px){
+	body{ marign: 0;}	
+	nav { float: none;}
+	main { margin-left: 0;}
+	h1 { margin: 0; width:90%;}
+}
+
+#wrapper{
+	width: 80%;
+	margin: 0 auto;
+	/*min-width:600px;*/
+	max-width:700px;
+}
+
+header{
+	font-size: 150%;
+	padding: 10px 10px 10px 20px;
+}
+
+h1{
+	margin-bottom:20px;
+	font-size: 0.70em;
+}
+
+nav{
+	float: left;
+	width: 400px;
+	font-weight: bold;
+	
+	ul{
+		list-style-type: none;
+		margin-left: 0;
+		padding: 10px;
+		display: table-cell;
+	}
+	
+	li{
+		font-size: 0.80em;
+		vertical-align: middle;
+		padding-top: 5px;
+		display: block;
+	}
+	
+	img{ 
+		vertical-align: middle;
+		width: 18%;
+		height: 18%;
+		background-image: url('image/backcolor.png');
+		background-position: center; 
+		background-repeat: no-repeat;
+		padding: 30px;
+	}
+	
+	img:hover{ 
+		width: 18%;
+		height: 18%;
+		background-image: url('image/hovercolor.png');
+		background-position: center; 
+		background-repeat: no-repeat;
+	}
+	
+	a { 
+		text-decoration: none;
+		padding: 10px;
+	}
+}
+
+main{
+	overflow: auto;
+	padding: 10px 20px;
+	display: block;
+	background-color:#ececec;
+}
+
+from{
+	padding: 5px;
+	margin-right:0;
+}
+
+input[type="text"]{
+	border-style: none;
+	color: #FFF;
+	height:40px;
+	margin-bottom: 10px;
+	width: 100%;
+	background-color: #b8b8b8;
+	padding-left:5px;
+}
+
+form input:hover{
+	background-color: #959595;
+}
+
+#childage {width: 50%;}
+
+#submitButton{
+	display:block;
+	float:right;
+	border-style: none;
+	background-color: #93bc79;
+	margin-right: 0;
+	margin-top: 10px;
+	height:40px;
+	padding: 3px 20px;
+	@include fontStyle();
+}
+
+input::-webkit-input-placeholder{
+	@include fontStyle();
+}
+input:-moz-placeholder{
+	@include fontStyle();
+}
+input:-ms-input-placeholder{
+	@include fontStyle();
+}
